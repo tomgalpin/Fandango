@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @seat.location %>
+</p>
+
+<p>
+  <b>Theater:</b>
+  <%= @seat.theater_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_seat_path(@seat) %> |
+<%= link_to 'Back', seats_path %>

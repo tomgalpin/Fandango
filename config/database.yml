@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: Fandango_development
+  pool: 5
+  username: tomgalpin
+  host: localhost
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: Fandango_test
+  pool: 5
+  username: tomgalpin
+  host: localhost
+  password:

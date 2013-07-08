@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Price:</b>
+  <%= @showing.price %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @showing.time %>
+</p>
+
+<p>
+  <b>Theater:</b>
+  <%= @showing.theater_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_showing_path(@showing) %> |
+<%= link_to 'Back', showings_path %>

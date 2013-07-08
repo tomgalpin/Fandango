@@ -1,0 +1,41 @@
+<div id="admin_container">
+  <div id="admin_header">
+    <h1>Admin Page</h1>
+  </div>
+
+  <div id="add_new_movie">
+    <h3>Add a new Movie</h3>
+    <div id="add_movie_form">
+      <%= form_for(@movie) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.submit "Submit" %>
+      <% end %>
+    </div>
+    <div id="add_movie_times">
+    </div>
+      <br>
+  </div>
+
+  <div id="movie_table">
+    <table border="1px">
+      <tr>
+        <th>Movie Title</th>
+        <th>Show Times</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td>Show Times</td>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>
